@@ -138,13 +138,16 @@ while True:
         hwin.append(resultjt)
         hwin.append([xfinal, yfinal])
         result.append([xfinal, yfinal])
+        plt.plot(startx, starty, 'xr')
+        plt.plot(endx, endy, 'xg')
         plt.plot([hnew[0][0],result[-1][0]], [hnew[0][1],result[-1][1]], 'b',) # [hnew[0][0],result[-1][0]], [hnew[0][1], result[-1][1]], 'bo',
         plt.axis([0, max, 0, max])
         impo=0
+        plt.pause(0.0001)
     if impo==400:
         print('impossible at iteration #' + str(citer))
 
-plt.plot([xfinal, hnew[0][0]], [yfinal, hnew[0][1]], 'c')
+plt.plot([xfinal, hnew[0][0]], [yfinal, hnew[0][1]], 'm')
 px=hnew[0][0]
 
 while px != startx:
@@ -153,9 +156,9 @@ while px != startx:
             ploc=hwin[2*k]
             cloc=hwin[2*k+1]
             px=hwin[2*k][0]
-            plt.plot([cloc[0], ploc[0]], [cloc[1], ploc[1]], 'c')
+            plt.plot([cloc[0], ploc[0]], [cloc[1], ploc[1]], 'm')
             break
 
-plt.plot(startx, starty, 'xr')
-plt.plot(endx, endy, 'xg')
+#plt.plot(startx, starty, 'xr')
+#plt.plot(endx, endy, 'xg')
 plt.show()

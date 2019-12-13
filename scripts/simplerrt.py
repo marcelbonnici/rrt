@@ -14,6 +14,7 @@ unscal=[[qinit, qinit]]
 #hmath=[[qinit, qinit]]
 #ydist=math.sqrt(dist-(xdist*xdist))
 for i in range(0, iter):
+    plt.pause(.05)
     hcan=[max] #h candidate: an array where, as far as the code has checked, the last value in the array is the smallest hypotenuse found so far
     xnew=max*np.random.rand()
     ynew=max*np.random.rand()
@@ -29,7 +30,7 @@ for i in range(0, iter):
     permx=(unscal[0]-hwin[0][0])/hcan[-1]
     permy=(unscal[1]-hwin[0][1])/hcan[-1]
     result.append([hwin[0][0]+permx, hwin[0][1]+permy])
-    plt.plot([hwin[0][0],result[-1][0]], [hwin[0][1],result[-1][1]], 'k',)
+    plt.plot([hwin[0][0],result[-1][0]], [hwin[0][1],result[-1][1]], 'b',)
     #1st should be [hwin[0][0],result[-1][0]], [hwin[0][1], result[-1][1]], 'ro',
     plt.axis([0, max, 0, max])
 plt.show()

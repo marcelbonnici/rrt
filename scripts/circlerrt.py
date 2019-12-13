@@ -167,6 +167,9 @@ while True: #while xfinal < endx-sensitivity or xfinal > endx+sensitivity or yfi
         hwin.append(resultjt)
         hwin.append([xfinal, yfinal])
         result.append([xfinal, yfinal])
+        plt.plot(startx, starty, 'xr')
+        plt.plot(endx, endy, 'xg')
+        plt.pause(0.001)
         plt.plot([hnew[0][0],result[-1][0]], [hnew[0][1],result[-1][1]], 'b',) # [hnew[0][0],result[-1][0]], [hnew[0][1], result[-1][1]], 'bo',
         plt.axis([0, max, 0, max])
         impo=0
@@ -185,6 +188,4 @@ while px != startx:
             plt.plot([cloc[0], ploc[0]], [cloc[1], ploc[1]], 'c')
             break
 
-plt.plot(startx, starty, 'xr')
-plt.plot(endx, endy, 'xg')
 plt.show()
