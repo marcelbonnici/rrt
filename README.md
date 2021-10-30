@@ -1,7 +1,7 @@
 # Rapidly-Growing Random Tree
 **Northwestern MS Robotics Hackathon Project**
 
-The project entailed coding an rapidly-growing random tree (RRT), the backbone of robot path planning, in three different assignments. For more detail on RRTs and the tasks, [click here.](http://robotics.mech.northwestern.edu/~elwin/rrt_challenge.html)
+The project entailed coding an rapidly-growing random tree (RRT), the backbone of robot path planning, in three different assignments. For more detail on RRTs and the tasks, [click here.](https://nu-msr.github.io/hackathon_site/rrt_challenge.html)
 
 1) simplerrt.py: Starting from the center of a 100x100 plot, create an RRT that expands for a finite amount of iterations, with edges measuring one unit in length.
 
